@@ -16,7 +16,7 @@ namespace PsHtml
 
       config.Routes.MapHttpRoute(
           name: "default",
-          routeTemplate: "",
+          routeTemplate: "{*url}",
           defaults: new { controller = "Home", id = RouteParameter.Optional }
       );
     }
