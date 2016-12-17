@@ -1,0 +1,13 @@
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\PsHtml.dll.config
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\PsHtml.dll
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\PsHtml.pdb
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\Newtonsoft.Json.dll
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\System.Net.Http.Formatting.dll
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\System.Web.Http.dll
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\System.Web.Http.WebHost.dll
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\Newtonsoft.Json.xml
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\System.Net.Http.Formatting.xml
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\System.Web.Http.xml
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\bin\System.Web.Http.WebHost.xml
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\obj\Debug\PsHtml.dll
+C:\Workspaces\rocketpie\pshtml\src\PsHtml\PsHtml\obj\Debug\PsHtml.pdb
