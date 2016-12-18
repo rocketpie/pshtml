@@ -7,3 +7,5 @@ When the site is accessed, it looks for a $RequestUri.AbsolutePath.html.ps1 file
 Todo: handling of multi value parameters (e.g. ids=1,2,3, untested; may work out of the box)  
 Todo: Async execution => live http response  
 Todo: allow for html resources to be accessed (css, js)  
+
+Versioning is semantic.
