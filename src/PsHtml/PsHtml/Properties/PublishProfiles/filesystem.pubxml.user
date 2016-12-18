@@ -6,14 +6,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Workspaces\rocketpie\pshtml\Releases\v0.1.0</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Workspaces\rocketpie\pshtml\Release\</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 20:33:56</publishTime>
+      <publishTime>06/13/2016 23:06:14</publishTime>
     </File>
     <File Include="bin/PsHtml.dll">
-      <publishTime>12/18/2016 17:19:38</publishTime>
+      <publishTime>12/18/2016 19:53:15</publishTime>
     </File>
     <File Include="bin/System.Management.Automation.dll">
       <publishTime>11/25/2015 22:03:02</publishTime>
@@ -28,13 +28,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 03:03:46</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>12/17/2016 08:49:23</publishTime>
+      <publishTime>12/18/2016 19:51:11</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>12/17/2016 08:49:23</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>12/18/2016 13:03:41</publishTime>
+      <publishTime>12/18/2016 19:37:58</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>12/17/2016 08:49:23</publishTime>
@@ -43,7 +43,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2016 08:49:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/18/2016 17:19:38</publishTime>
+      <publishTime>12/18/2016 19:37:58</publishTime>
     </File>
   </ItemGroup>
 </Project>
