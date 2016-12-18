@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Management.Automation;
@@ -16,8 +15,9 @@ namespace PsHtml.Controllers
     public HttpResponseMessage Get()
     {
       var path = Request.RequestUri.AbsolutePath.Remove(0, 1);
-      if (path.EndsWith("/") || string.IsNullOrEmpty(path))  {
-        path += "index"; 
+      if (path.EndsWith("/") || string.IsNullOrEmpty(path))
+      {
+        path += "index";
       }
       string filename = (path + ".html.ps1");
 
