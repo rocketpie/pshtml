@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using PsHtml.Controllers;
+using System.Web.Http;
 
 namespace PsHtml
 {
@@ -7,6 +8,11 @@ namespace PsHtml
     protected void Application_Start()
     {
       GlobalConfiguration.Configure(WebApiConfig.Register);
+
+      var defaultContentType = System.Configuration.ConfigurationManager.AppSettings["DefaultContentType"];
+      if (defaultContentType != null) {
+        HomeController.DefaultContentType = defaultContentType;
+      }
     }
   }
 }

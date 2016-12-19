@@ -5,6 +5,7 @@ using System.Management.Automation;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Web;
 using System.Web.Hosting;
 using System.Web.Http;
@@ -13,8 +14,13 @@ namespace PsHtml.Controllers
 {
   public class HomeController : ApiController
   {
+    const string MEDIA_TYPE_HEADER = "content-type: ";
+    public static string DefaultContentType { get; set; } = "text/plain";
+
     public HttpResponseMessage Get()
     {
+      var response = new HttpResponseMessage();
+
       try
       {
         string fileName = Request.RequestUri.AbsolutePath.Remove(0, 1);
@@ -27,11 +33,6 @@ namespace PsHtml.Controllers
 
         if (!File.Exists(filePath))
         {
-          var response = new HttpResponseMessage();
-          response.Content = new StringContent(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath);
-          response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
-          return response;
-
           throw new HttpResponseException(HttpStatusCode.NotFound);
         }
 
@@ -47,18 +48,29 @@ namespace PsHtml.Controllers
           }
 
           var output = ps.Invoke();
+          var outputStrings = output.Select(o => o.ToString());
 
-          var response = new HttpResponseMessage();
-          response.Content = new StringContent(string.Join(Environment.NewLine, output.Select(o => o.ToString())));
-          response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+          if (outputStrings.Any())
+          {
+            string contentType = DefaultContentType;
+
+            var first = outputStrings.FirstOrDefault();
+            if (!string.IsNullOrEmpty(first) && first.StartsWith(MEDIA_TYPE_HEADER))
+            {
+              contentType = first.Remove(0, MEDIA_TYPE_HEADER.Length);
+              outputStrings = outputStrings.Skip(1);
+            }
+
+            response.Content = new StringContent(string.Join(Environment.NewLine, outputStrings));
+            response.Content.Headers.ContentType = new MediaTypeHeaderValue(contentType);
+          }
+
           return response;
         }
       }
       catch (Exception e)
       {
-        var response = new HttpResponseMessage();
-        response.Content = new StringContent(e.ToString());
-        response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+        response.Content = new StringContent(e.ToString(), Encoding.UTF8, "text/plain");
         return response;
       }
     }
